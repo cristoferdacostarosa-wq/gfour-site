@@ -1,0 +1,42 @@
+/* ============================================
+   G-FOUR - ESTILOS GLOBAIS
+   Tailwind CSS v4 + Identidade da Marca
+   ============================================ */
+
+/* Importa o Tailwind. UMA linha só carrega tudo
+   (base, componentes, utilitários). Tailwind 4
+   simplificou: não precisa mais de 3 @tailwind. */
+@import "tailwindcss";
+
+/* ============================================
+   PALETA OFICIAL G-FOUR
+   Manual de Marca v1.0 - Abril/2026
+
+   No Tailwind 4, as cores customizadas vão aqui
+   dentro de @theme. Cada variável vira uma
+   classe utilitária automaticamente.
+
+   Exemplo: --color-gfour-verde
+   gera as classes: bg-gfour-verde, text-gfour-verde, etc.
+   ============================================ */
+@theme {
+  /* Verde G-Four - cor primária (60% de uso na marca) */
+  --color-gfour-verde: #1A3D2B;
+  --color-gfour-verde-claro: #2A5440;
+  --color-gfour-verde-escuro: #0F2A1C;
+
+  /* Cinza Chumbo - textos e detalhes (10% de uso) */
+  --color-gfour-chumbo: #3A3A3A;
+  --color-gfour-chumbo-claro: #5C5C5C;
+  --color-gfour-chumbo-escuro: #1F1F1F;
+
+  /* Branco - fundo e respiro (30% de uso) */
+  --color-gfour-branco: #FFFFFF;
+  --color-gfour-branco-off: #F5F5F2;
+
+  /* ============================================
+     TIPOGRAFIA OFICIAL
+     Fonte única da marca: Montserrat
+     ============================================ */
+  --font-sans: "Montserrat", system-ui, sans-serif;
+}

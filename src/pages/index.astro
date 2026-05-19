@@ -1,17 +1,73 @@
 ---
+// ============================================
+// HOME - G-Four Fibras Estruturais
+// ============================================
+// Bloco entre os "---" é JavaScript que roda no SERVIDOR
+// (não no navegador do visitante). Aqui importamos coisas
+// que a página precisa antes de renderizar.
 
+// Importa o CSS global com Tailwind + paleta G-Four
+// Sem essa linha, NENHUMA classe Tailwind funciona.
+import '../styles/global.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>G-Four - Em construção</title>
-	</head>
-	<body>
-		<h1>G-FOUR EM BREVE</h1>
-	</body> 
+<html lang="pt-BR">
+  <head>
+    <!-- Configurações essenciais de qualquer página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO básico - o Google lê estas tags -->
+    <title>G-Four | Fibras Estruturais para Concreto - 25 Anos de Expertise</title>
+    <meta
+      name="description"
+      content="Referência nacional em macrofibra estrutural e microfibra para concreto. Substitua a tela de aço com economia de até 40% e desempenho técnico superior."
+    />
+
+    <!-- Favicon (ícone da aba do navegador) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- ============================================ -->
+    <!-- FONTE MONTSERRAT (Google Fonts) -->
+    <!-- ============================================ -->
+    <!-- preconnect: avisa o navegador "vou pegar arquivo daqui",
+         ele já abre conexão antes mesmo de precisar. Ganha velocidade. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Carrega Montserrat em 2 pesos: Regular (400) e Bold (700) -->
+    <!-- display=swap: mostra texto com fonte do sistema enquanto
+         Montserrat baixa, depois troca. Evita "tela em branco". -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!--
+    Body com classes Tailwind:
+    - font-sans: aplica Montserrat (definida no global.css como --font-sans)
+    - bg-gfour-branco: fundo branco da marca
+    - text-gfour-chumbo: cor de texto padrão (chumbo)
+  -->
+  <body class="font-sans bg-gfour-branco text-gfour-chumbo">
+
+    <!-- TESTE: bloco verde gigante centralizado.
+         Se aparecer no navegador com fundo verde G-Four
+         e texto branco em Montserrat, está TUDO funcionando. -->
+    <main class="min-h-screen flex items-center justify-center bg-gfour-verde">
+      <div class="text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-bold text-gfour-branco mb-4">
+          G-FOUR
+        </h1>
+        <p class="text-gfour-branco text-xl md:text-2xl">
+          Configuração funcionando ✓
+        </p>
+        <p class="text-gfour-branco-off text-sm mt-8 opacity-75">
+          Tailwind 4 + Paleta G-Four + Montserrat
+        </p>
+      </div>
+    </main>
+
+  </body>
 </html>
