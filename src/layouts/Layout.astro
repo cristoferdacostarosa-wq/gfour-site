@@ -1,0 +1,102 @@
+---
+// ============================================
+// LAYOUT BASE - G-Four
+// ============================================
+// Este arquivo é a FORMA usada por todas as páginas.
+// Define a estrutura comum: <head> com SEO, fontes,
+// e o lugar onde o conteúdo de cada página vai entrar.
+//
+// Como funciona:
+// 1. Toda página importa este Layout
+// 2. A página envolve seu conteúdo dentro do <Layout>
+// 3. O conteúdo da página aparece onde tem <slot />
+//
+// Analogia: É a forma de bolo. O <slot /> é o espaço
+// onde a massa de cada bolo (página) é colocada.
+// ============================================
+
+// Importa o CSS global (Tailwind + paleta G-Four)
+// Todas as páginas que usam este Layout herdam os estilos.
+import '../styles/global.css';
+
+// Define o que cada página pode PASSAR pro Layout
+// (title e description únicos pra SEO de cada página)
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+// Pega os valores que a página passou.
+// Se a página não passar, usa o valor padrão (depois do ||)
+const {
+  title = 'G-Four | Fibras Estruturais para Concreto',
+  description = 'Referência nacional em macrofibra estrutural e microfibra para concreto. Substitua a tela de aço com economia de até 40% e desempenho técnico superior.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- ============================================ -->
+    <!-- META TAGS ESSENCIAIS -->
+    <!-- ============================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- ============================================ -->
+    <!-- SEO - O Google lê estas tags -->
+    <!-- ============================================ -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Palavras-chave técnicas que engenheiros buscam -->
+    <meta
+      name="keywords"
+      content="fibra para concreto, macrofibra estrutural, microfibra, substituto tela de aço, piso industrial com fibra, concreto reforçado, G-Four"
+    />
+
+    <!-- Autoria e cópia -->
+    <meta name="author" content="G-Four Fibras Estruturais" />
+
+    <!-- ============================================ -->
+    <!-- OPEN GRAPH (preview quando compartilha link) -->
+    <!-- Aparece bonitinho quando alguém manda no WhatsApp ou LinkedIn -->
+    <!-- ============================================ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Favicon (ícone da aba do navegador) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- ============================================ -->
+    <!-- FONTE MONTSERRAT (Google Fonts) -->
+    <!-- ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!--
+    Body com classes Tailwind:
+    - font-sans: aplica Montserrat
+    - bg-gfour-branco: fundo branco
+    - text-gfour-chumbo: texto chumbo padrão
+    - antialiased: deixa as fontes mais suaves (mais bonitas)
+  -->
+  <body class="font-sans bg-gfour-branco text-gfour-chumbo antialiased">
+    <!--
+      ============================================
+      AQUI ENTRA O CONTEÚDO DE CADA PÁGINA
+      ============================================
+      <slot /> é o "buraco" onde a página coloca o seu HTML.
+      É como o espaço da forma de bolo onde a massa vai.
+    -->
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,64 @@
+---
+const whatsappNumero = '5548996228397';
+const whatsappMensagem = 'Olá! Vim pelo site da G-Four e gostaria de mais informações sobre as fibras estruturais.';
+const whatsappLink = `https://wa.me/${whatsappNumero}?text=${encodeURIComponent(whatsappMensagem)}`;
+
+const itensMenu = [
+  { nome: 'Home', link: '/' },
+  { nome: 'Produtos', link: '/produtos' },
+  { nome: 'Cases', link: '/cases' },
+  { nome: 'Economia', link: '/economia' },
+  { nome: 'Contato', link: '/contato' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-gfour-verde shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+
+    <a href="/" class="text-gfour-branco text-2xl md:text-3xl font-bold tracking-tight hover:opacity-80 transition-opacity" aria-label="G-Four">
+      G-FOUR
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {itensMenu.map((item) => (
+        <a href={item.link} class="text-gfour-branco text-sm font-medium hover:text-gfour-branco-off transition-colors uppercase tracking-wide">
+          {item.nome}
+        </a>
+      ))}
+
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="bg-gfour-branco text-gfour-verde px-6 py-2.5 rounded-md font-bold text-sm uppercase tracking-wide hover:bg-gfour-branco-off transition-colors shadow-md">
+        Falar com Especialista
+      </a>
+    </nav>
+
+    <button id="menu-mobile-btn" class="md:hidden text-gfour-branco p-2" aria-label="Abrir menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div id="menu-mobile" class="hidden md:hidden bg-gfour-verde-escuro border-t border-gfour-verde-claro">
+    <nav class="px-4 py-4 flex flex-col gap-4">
+      {itensMenu.map((item) => (
+        <a href={item.link} class="text-gfour-branco text-base font-medium hover:text-gfour-branco-off transition-colors uppercase tracking-wide py-2">
+          {item.nome}
+        </a>
+      ))}
+
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="bg-gfour-branco text-gfour-verde px-6 py-3 rounded-md font-bold text-sm uppercase tracking-wide text-center mt-2">
+        Falar com Especialista
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btnMenu = document.getElementById('menu-mobile-btn');
+  const menuMobile = document.getElementById('menu-mobile');
+  btnMenu?.addEventListener('click', () => {
+    menuMobile?.classList.toggle('hidden');
+  });
+</script>
