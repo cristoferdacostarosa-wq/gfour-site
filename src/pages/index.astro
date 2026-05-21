@@ -1,103 +1,19 @@
 ---
-// ============================================
-// HOME - Página Inicial G-Four
-// ============================================
-// Esta é a página principal do site.
-//
-// Estratégia:
-// 1. Importa o Layout (que tem head, body, etc)
-// 2. Importa o Header (cabeçalho de todas as páginas)
-// 3. Importa o Footer (rodapé de todas as páginas)
-// 4. Entre Header e Footer vem o conteúdo da Home
-//
-// O que vai DENTRO do <Layout> aparece no lugar do <slot />
-// que está dentro do Layout.astro.
-// ============================================
-
-// Importa o molde base
 import Layout from '../layouts/Layout.astro';
-
-// Importa os componentes reutilizáveis
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProvaAutoridade from '../components/ProvaAutoridade.astro';
 import Footer from '../components/Footer.astro';
 
-// ============================================
-// SEO específico desta página
-// ============================================
-// title e description são passados PRA o Layout
-// (lembra do interface Props no Layout.astro?)
 const tituloPagina = 'G-Four | Fibras Estruturais para Concreto - 25 Anos de Expertise';
-const descricaoPagina = 'Referência nacional em macrofibra estrutural e microfibra para concreto. Substitua a tela de aço com economia de até 40% e desempenho técnico superior. Atendimento via WhatsApp.';
+const descricaoPagina = 'Referência nacional em macrofibra estrutural e microfibra para concreto. Substitua a tela de aço com economia de até 40% e desempenho técnico superior. +6 milhões de m² executados.';
 ---
 
-<!--
-  ============================================
-  ESTRUTURA DA HOME
-  ============================================
-  <Layout> envolve tudo. Passamos title e description
-  como propriedades (props), igual atributos HTML.
-
-  Tudo que estiver DENTRO do <Layout> vira o <slot />
-  lá no Layout.astro.
--->
 <Layout title={tituloPagina} description={descricaoPagina}>
-
-  <!--
-    HEADER - Aparece no topo
-    Como é componente, vem prontinho
-  -->
   <Header />
-
-  <!--
-    ============================================
-    CONTEÚDO PRINCIPAL DA HOME
-    ============================================
-    <main> é a tag HTML semântica que indica
-    "este é o conteúdo principal da página".
-    Importante pra SEO e acessibilidade.
-
-    min-h-screen: ocupa pelo menos a altura da tela
-    (assim o footer fica no fim mesmo em página curta)
-  -->
-  <main class="min-h-screen">
-
-    <!--
-      ============================================
-      PLACEHOLDER TEMPORÁRIO - Hero virá depois
-      ============================================
-      Por enquanto, um bloco que mostra que
-      o site está "em construção" mas COM identidade.
-
-      Vamos substituir tudo isso na próxima etapa
-      pela Hero de verdade.
-    -->
-    <section class="bg-gfour-branco-off py-20 md:py-32">
-      <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
-
-        <p class="text-gfour-verde text-sm font-bold uppercase tracking-widest mb-4">
-          Em construção
-        </p>
-
-        <h1 class="text-4xl md:text-6xl font-bold text-gfour-chumbo-escuro mb-6 leading-tight">
-          Hero da Home<br />
-          <span class="text-gfour-verde">virá aqui em breve</span>
-        </h1>
-
-        <p class="text-gfour-chumbo text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          Header e Footer já estão funcionando.
-          A próxima etapa será construir a primeira dobra
-          com a headline e o CTA principal.
-        </p>
-
-      </div>
-    </section>
-
+  <main>
+    <Hero />
+    <ProvaAutoridade />
   </main>
-
-  <!--
-    FOOTER - Aparece no fim
-    Também componente reutilizável
-  -->
   <Footer />
-
 </Layout>

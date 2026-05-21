@@ -1,0 +1,88 @@
+---
+const numeros = [
+  {
+    valor: '+25',
+    unidade: 'ANOS',
+    descricao: 'de expertise em fibras estruturais',
+    destaque: false,
+  },
+  {
+    valor: '+50',
+    unidade: 'CONCRETEIRAS',
+    descricao: 'parceiras em todo o país',
+    destaque: false,
+  },
+  {
+    valor: '+6M',
+    unidade: 'm²',
+    descricao: 'de piso executado com fibras G-Four',
+    destaque: true,
+  },
+  {
+    valor: '+20',
+    unidade: 'ESTADOS',
+    descricao: 'atendidos com cobertura técnica nacional',
+    destaque: false,
+  },
+];
+---
+
+<section class="bg-gfour-branco-off py-20 md:py-28 border-t border-b border-gfour-chumbo/10">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+    <div class="text-center mb-16 md:mb-20">
+      <p class="text-gfour-verde text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-4 flex items-center justify-center gap-3">
+        <span class="inline-block w-12 h-px bg-gfour-verde"></span>
+        Confiança Comprovada
+        <span class="inline-block w-12 h-px bg-gfour-verde"></span>
+      </p>
+
+      <h2 class="text-gfour-chumbo-escuro text-3xl md:text-5xl font-bold leading-tight tracking-tight max-w-3xl mx-auto">
+        Os números que sustentam <br class="hidden md:block"/>
+        nossa <span class="text-gfour-verde">autoridade técnica.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+      {numeros.map((item) => (
+        <div class={`group relative bg-gfour-branco p-6 md:p-8 rounded-lg border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${item.destaque ? 'border-gfour-verde shadow-lg' : 'border-gfour-chumbo/10 hover:border-gfour-verde/40'}`}>
+
+          <div class="absolute top-0 left-0 w-full h-1 bg-gfour-verde rounded-t-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+          <p class={`font-bold leading-none tracking-tight mb-2 ${item.destaque ? 'text-gfour-verde text-4xl md:text-6xl' : 'text-gfour-chumbo-escuro text-4xl md:text-5xl'}`}>
+            {item.valor}
+          </p>
+
+          <p class="text-gfour-verde font-bold text-xs md:text-sm uppercase tracking-wider mb-3">
+            {item.unidade}
+          </p>
+
+          <div class="w-12 h-px bg-gfour-chumbo/20 mb-3"></div>
+
+          <p class="text-gfour-chumbo text-xs md:text-sm leading-relaxed">
+            {item.descricao}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-gfour-verde text-gfour-branco rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 shadow-lg">
+      <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-gfour-branco/10 rounded-full flex items-center justify-center">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 11l3 3l8 -8"/>
+          <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/>
+        </svg>
+      </div>
+
+      <div class="flex-1">
+        <p class="text-gfour-branco text-xs md:text-sm font-bold uppercase tracking-wider mb-1 opacity-80">
+          Diferencial G-Four
+        </p>
+        <p class="text-gfour-branco text-base md:text-lg leading-relaxed">
+          Suporte técnico personalizado em cada projeto, do dimensionamento à aplicação em obra.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
