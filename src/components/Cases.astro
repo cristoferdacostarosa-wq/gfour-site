@@ -1,0 +1,107 @@
+---
+const cases = [
+  {
+    cliente: 'Solar Coca-Cola',
+    local: 'Várzea Grande / MT',
+    metragem: '15.000',
+    produto: 'Macro + Microfibra',
+    projetoArt: true,
+    imagem: '/images/case-solar-coca-cola.jpg',
+  },
+  {
+    cliente: 'RD LOG',
+    local: 'Garuva / SC',
+    metragem: '32.000',
+    produto: 'Macrofibra',
+    projetoArt: true,
+    imagem: '/images/case-rd-log.jpg',
+  },
+  {
+    cliente: 'Zaeli Alimentos',
+    local: 'Mundo Novo / MS',
+    metragem: '8.000',
+    produto: 'Macro + Microfibra',
+    projetoArt: true,
+    imagem: '/images/case-zaeli.jpg',
+  },
+];
+---
+
+<section class="bg-gfour-branco-off py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+    <div class="text-center mb-16 md:mb-20">
+      <p class="text-gfour-verde text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-4 flex items-center justify-center gap-3">
+        <span class="inline-block w-12 h-px bg-gfour-verde"></span>
+        Obras Realizadas
+        <span class="inline-block w-12 h-px bg-gfour-verde"></span>
+      </p>
+
+      <h2 class="text-gfour-chumbo-escuro text-3xl md:text-5xl font-bold leading-tight tracking-tight max-w-3xl mx-auto">
+        Resultados que sustentam <span class="text-gfour-verde">cada metro quadrado.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {cases.map((item) => (
+        <div class="group bg-gfour-branco rounded-xl overflow-hidden border-2 border-gfour-chumbo/10 hover:border-gfour-verde/40 hover:shadow-xl transition-all duration-300 flex flex-col">
+
+          <div class="relative h-56 bg-gfour-verde overflow-hidden">
+            <img src={item.imagem} alt={`Obra ${item.cliente} em ${item.local}`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+
+            <div class="absolute inset-0 bg-gfour-verde flex-col items-center justify-center" style="display: none;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 mb-2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span class="text-gfour-branco-off text-xs uppercase tracking-wider opacity-50">Foto em breve</span>
+            </div>
+
+            {item.projetoArt && (
+              <span class="absolute top-4 left-4 bg-gfour-branco text-gfour-verde text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-10">
+                Projeto + ART
+              </span>
+            )}
+          </div>
+
+          <div class="p-6 md:p-8 flex flex-col flex-1">
+
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-gfour-verde text-3xl md:text-4xl font-bold tracking-tight leading-none">{item.metragem}</span>
+              <span class="text-gfour-verde text-lg font-bold">m²</span>
+            </div>
+
+            <h3 class="text-gfour-chumbo-escuro text-xl font-bold tracking-tight mb-2">
+              {item.cliente}
+            </h3>
+
+            <p class="text-gfour-chumbo text-sm flex items-center gap-2 mb-4">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              {item.local}
+            </p>
+
+            <div class="mt-auto pt-4 border-t border-gfour-chumbo/10">
+              <p class="text-gfour-chumbo text-xs uppercase tracking-wider font-bold mb-1 opacity-60">Solução aplicada</p>
+              <p class="text-gfour-chumbo-escuro text-sm font-medium">{item.produto}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12 md:mt-16">
+      <a href="/cases" class="group inline-flex items-center gap-2 text-gfour-verde font-bold text-sm uppercase tracking-wide hover:gap-3 transition-all">
+        Ver todas as obras
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
