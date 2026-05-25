@@ -1,0 +1,85 @@
+---
+const diferenciais = [
+  {
+    numero: '01',
+    titulo: 'Sem corrosão, mais durabilidade',
+    descricao: 'Diferente da tela de aço, a fibra não corrói com o tempo nem com a umidade. Isso elimina pontos de fragilidade na estrutura e aumenta significativamente a vida útil do concreto.',
+    icone: 'escudo',
+  },
+  {
+    numero: '02',
+    titulo: 'Trabalhabilidade superior',
+    descricao: 'Nossas fibras se distribuem de forma homogênea na mistura, sem formar ouriços ou empelotamento. Isso facilita a aplicação em obra e garante desempenho uniforme em toda a estrutura.',
+    icone: 'raio',
+  },
+  {
+    numero: '03',
+    titulo: 'Economia de até 40%',
+    descricao: 'A substituição da tela de aço por macrofibra reduz custos com material, mão de obra de armação e tempo de execução. Uma obra mais econômica, sem comprometer o desempenho estrutural.',
+    icone: 'grafico',
+  },
+];
+---
+
+<section class="bg-gfour-verde text-gfour-branco py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+    <div class="text-center mb-16 md:mb-20">
+      <p class="text-gfour-branco-off text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-4 flex items-center justify-center gap-3">
+        <span class="inline-block w-12 h-px bg-gfour-branco-off"></span>
+        Por que fibra G-Four
+        <span class="inline-block w-12 h-px bg-gfour-branco-off"></span>
+      </p>
+
+      <h2 class="text-gfour-branco text-3xl md:text-5xl font-bold leading-tight tracking-tight max-w-3xl mx-auto">
+        A engenharia por trás <br class="hidden md:block"/>
+        de cada decisão.
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+      {diferenciais.map((item) => (
+        <div class="group relative">
+
+          <div class="absolute -top-4 right-0 text-gfour-branco/10 text-7xl md:text-8xl font-bold leading-none select-none">
+            {item.numero}
+          </div>
+
+          <div class="relative z-10">
+
+            <div class="w-14 h-14 bg-gfour-branco/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gfour-branco/20 transition-colors">
+              {item.icone === 'escudo' && (
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              )}
+              {item.icone === 'raio' && (
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              )}
+              {item.icone === 'grafico' && (
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="20" x2="12" y2="10"></line>
+                  <line x1="18" y1="20" x2="18" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="16"></line>
+                </svg>
+              )}
+            </div>
+
+            <div class="w-12 h-1 bg-gfour-branco mb-5"></div>
+
+            <h3 class="text-gfour-branco text-xl md:text-2xl font-bold tracking-tight mb-4 leading-tight">
+              {item.titulo}
+            </h3>
+
+            <p class="text-gfour-branco-off text-sm md:text-base leading-relaxed opacity-90">
+              {item.descricao}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
