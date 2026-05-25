@@ -1,0 +1,102 @@
+---
+const produtos = [
+  {
+    nome: 'Macrofibra Estrutural',
+    subtitulo: 'Substituta da tela de aço',
+    descricao: 'Fibra de alto desempenho que substitui integralmente a tela de aço em pisos industriais, garagens e estruturas de concreto.',
+    beneficios: [
+      'Substitui 100% a tela de aço',
+      'Sem corrosão, maior durabilidade',
+      'Economia de até 40% no custo final',
+    ],
+    destaque: true,
+    link: '/produtos',
+  },
+  {
+    nome: 'Microfibra de Vidro',
+    subtitulo: 'Controle de retração',
+    descricao: 'Fibra técnica que atua no combate à retração do concreto, prevenindo fissuras e elevando a qualidade do acabamento.',
+    beneficios: [
+      'Combate a retração plástica',
+      'Reduz fissuras no concreto',
+      'Melhora o acabamento superficial',
+    ],
+    destaque: false,
+    link: '/produtos',
+  },
+];
+---
+
+<section class="bg-gfour-branco py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+    <div class="text-center mb-16 md:mb-20">
+      <p class="text-gfour-verde text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-4 flex items-center justify-center gap-3">
+        <span class="inline-block w-12 h-px bg-gfour-verde"></span>
+        Nossos Produtos
+        <span class="inline-block w-12 h-px bg-gfour-verde"></span>
+      </p>
+
+      <h2 class="text-gfour-chumbo-escuro text-3xl md:text-5xl font-bold leading-tight tracking-tight max-w-3xl mx-auto">
+        Duas soluções técnicas para <span class="text-gfour-verde">cada necessidade.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {produtos.map((produto) => (
+        <div class={`group relative flex flex-col rounded-xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 ${produto.destaque ? 'bg-gfour-verde text-gfour-branco shadow-2xl' : 'bg-gfour-branco-off border-2 border-gfour-chumbo/10 hover:border-gfour-verde/40 hover:shadow-xl'}`}>
+
+          {produto.destaque && (
+            <span class="absolute top-6 right-6 bg-gfour-branco text-gfour-verde text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Carro-chefe
+            </span>
+          )}
+
+          <div class={`w-16 h-16 rounded-lg flex items-center justify-center mb-6 ${produto.destaque ? 'bg-gfour-branco/10' : 'bg-gfour-verde'}`}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={produto.destaque ? 'white' : 'white'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+
+          <p class={`text-xs font-bold uppercase tracking-wider mb-2 ${produto.destaque ? 'text-gfour-branco-off' : 'text-gfour-verde'}`}>
+            {produto.subtitulo}
+          </p>
+
+          <h3 class={`text-2xl md:text-3xl font-bold tracking-tight mb-4 ${produto.destaque ? 'text-gfour-branco' : 'text-gfour-chumbo-escuro'}`}>
+            {produto.nome}
+          </h3>
+
+          <p class={`text-base leading-relaxed mb-8 ${produto.destaque ? 'text-gfour-branco-off opacity-90' : 'text-gfour-chumbo'}`}>
+            {produto.descricao}
+          </p>
+
+          <ul class="space-y-4 mb-10 flex-1">
+            {produto.beneficios.map((beneficio) => (
+              <li class="flex items-start gap-3">
+                <span class={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 ${produto.destaque ? 'bg-gfour-branco/20' : 'bg-gfour-verde/10'}`}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={produto.destaque ? 'white' : '#1A3D2B'} stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class={`text-sm md:text-base font-medium ${produto.destaque ? 'text-gfour-branco' : 'text-gfour-chumbo-escuro'}`}>
+                  {beneficio}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <a href={produto.link} class={`group/btn inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md font-bold text-sm uppercase tracking-wide transition-all ${produto.destaque ? 'bg-gfour-branco text-gfour-verde hover:bg-gfour-branco-off' : 'bg-gfour-verde text-gfour-branco hover:bg-gfour-verde-claro'}`}>
+            Conhecer Produto
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:translate-x-1 transition-transform">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
