@@ -1,14 +1,282 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import EmBreve from '../components/EmBreve.astro';
 import Footer from '../components/Footer.astro';
+import CtaFinal from '../components/CtaFinal.astro';
 ---
 
-<Layout title="Economia | Comparativo Fibra vs Tela de Aço | G-Four" description="Comparativo técnico e econômico: macrofibra estrutural G-Four vs tela de aço. Economia de até 40% comprovada.">
+<Layout
+  title="Economia | Comparativo Fibra vs Tela de Aço | G-Four"
+  description="Comparativo técnico e econômico: macrofibra estrutural G-Four vs tela de aço. Economia de até 40% comprovada em obras reais."
+>
   <Header />
   <main>
-    <EmBreve titulo="Comparativo Técnico" subtitulo="Estamos preparando o comparativo completo da macrofibra G-Four vs tela de aço. Para receber agora, fale com nosso especialista." />
+
+    <!-- HERO -->
+    <section class="bg-gfour-verde-escuro text-gfour-branco py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+          <span class="inline-block w-12 h-px bg-gfour-branco-off"></span>
+          Comparativo Técnico e Econômico
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-4xl">
+          Menos aço. Menos etapas.<br class="hidden md:block" /> Mais resultado.
+        </h1>
+        <p class="text-gfour-branco-off text-lg md:text-xl leading-relaxed max-w-2xl opacity-90">
+          A macrofibra estrutural G-Four substitui telas metálicas em pisos industriais com economia de até 40% e desempenho técnico superior — comprovado em mais de 6 milhões de m² executados.
+        </p>
+      </div>
+    </section>
+
+    <!-- POR QUE A FIBRA ECONOMIZA -->
+    <section class="bg-gfour-creme py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-14">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Por que economiza
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gfour-verde-escuro leading-tight max-w-2xl">
+            A tela de aço tem custos que não aparecem na nota fiscal.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div class="bg-white p-8 rounded-lg border border-gfour-verde/10">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-3">Sem armação</h3>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">Elimina o corte, transporte, posicionamento e amarração de telas. Menos mão de obra especializada, menos prazo.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg border border-gfour-verde/10">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-3">Sem corrosão</h3>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">A macrofibra sintética não oxida. Zero risco de deterioração em ambientes úmidos, agressivos ou expostos.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg border border-gfour-verde/10">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-3">Sem retrabalho</h3>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">Tela fora de posição durante a concretagem é erro comum e caro. A fibra se distribui no volume — não tem posição errada.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg border border-gfour-verde/10">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-3">Mais velocidade</h3>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">Grandes panos de piso executados sem interrupção para armação. Prazo de obra menor significa custo de canteiro menor.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVO TÉCNICO -->
+    <section class="bg-white py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-14">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Comparativo direto
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gfour-verde-escuro leading-tight">
+            Macrofibra G-Four vs Tela de Aço
+          </h2>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b-2 border-gfour-verde">
+                <th class="text-left py-4 pr-6 text-gfour-verde-escuro font-bold uppercase tracking-wide text-xs w-1/3">Critério</th>
+                <th class="text-left py-4 px-6 text-gfour-verde-escuro font-bold uppercase tracking-wide text-xs w-1/3">
+                  <span class="inline-flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-gfour-verde inline-block"></span>
+                    Macrofibra G-Four
+                  </span>
+                </th>
+                <th class="text-left py-4 pl-6 text-gfour-verde-escuro/50 font-bold uppercase tracking-wide text-xs w-1/3">
+                  <span class="inline-flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-gfour-verde-escuro/30 inline-block"></span>
+                    Tela de Aço
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gfour-verde/10">
+
+              <tr class="hover:bg-gfour-creme/50 transition-colors">
+                <td class="py-5 pr-6 font-medium text-gfour-verde-escuro">Posicionamento</td>
+                <td class="py-5 px-6 text-gfour-verde font-medium">Distribuído em todo o volume</td>
+                <td class="py-5 pl-6 text-gfour-verde-escuro/60">Fixo em uma camada — risco de erro</td>
+              </tr>
+
+              <tr class="hover:bg-gfour-creme/50 transition-colors">
+                <td class="py-5 pr-6 font-medium text-gfour-verde-escuro">Corrosão</td>
+                <td class="py-5 px-6 text-gfour-verde font-medium">Zero — fibra sintética inerte</td>
+                <td class="py-5 pl-6 text-gfour-verde-escuro/60">Risco em ambientes úmidos e agressivos</td>
+              </tr>
+
+              <tr class="hover:bg-gfour-creme/50 transition-colors">
+                <td class="py-5 pr-6 font-medium text-gfour-verde-escuro">Mão de obra</td>
+                <td class="py-5 px-6 text-gfour-verde font-medium">Sem armação — mistura no concreto</td>
+                <td class="py-5 pl-6 text-gfour-verde-escuro/60">Corte, transporte, posicionamento e amarração</td>
+              </tr>
+
+              <tr class="hover:bg-gfour-creme/50 transition-colors">
+                <td class="py-5 pr-6 font-medium text-gfour-verde-escuro">Velocidade de execução</td>
+                <td class="py-5 px-6 text-gfour-verde font-medium">Alta — grandes panos sem interrupção</td>
+                <td class="py-5 pl-6 text-gfour-verde-escuro/60">Limitada pelas etapas de armação</td>
+              </tr>
+
+              <tr class="hover:bg-gfour-creme/50 transition-colors">
+                <td class="py-5 pr-6 font-medium text-gfour-verde-escuro">Comportamento pós-fissura</td>
+                <td class="py-5 px-6 text-gfour-verde font-medium">Mantém capacidade — fibras travam a fissura</td>
+                <td class="py-5 pl-6 text-gfour-verde-escuro/60">Depende do posicionamento correto da tela</td>
+              </tr>
+
+              <tr class="hover:bg-gfour-creme/50 transition-colors">
+                <td class="py-5 pr-6 font-medium text-gfour-verde-escuro">Economia global estimada</td>
+                <td class="py-5 px-6 text-gfour-verde font-bold text-base">Até 40%</td>
+                <td class="py-5 pl-6 text-gfour-verde-escuro/60">Referência</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TABELA TEASER -->
+    <section class="bg-gfour-verde-escuro text-gfour-branco py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="mb-14">
+          <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-branco-off"></span>
+            Dimensionamento técnico
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+            Como a substituição funciona na prática
+          </h2>
+          <p class="text-gfour-branco-off opacity-80 text-lg max-w-2xl">
+            Em cada configuração de piso, a macrofibra G-Four substitui a tela com menor espessura, sem armação e desempenho superior.
+          </p>
+        </div>
+        <div class="overflow-x-auto mb-10">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gfour-branco/20">
+                <th class="text-left py-4 pr-6 text-gfour-branco-off font-bold uppercase tracking-wide text-xs">Solução Tradicional</th>
+                <th class="text-left py-4 px-6 text-gfour-branco-off font-bold uppercase tracking-wide text-xs">Solução G-Four</th>
+                <th class="text-left py-4 pl-6 text-gfour-branco-off font-bold uppercase tracking-wide text-xs">Resultado</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gfour-branco/10">
+              <tr>
+                <td class="py-5 pr-6 text-gfour-branco-off opacity-80">Piso 22 cm + 2 telas 10x10 (6 mm)</td>
+                <td class="py-5 px-6 text-gfour-branco font-medium">Piso 20 cm + Macro + Microfibra</td>
+                <td class="py-5 pl-6 text-gfour-verde-claro font-medium">Espessura reduzida + desempenho superior</td>
+              </tr>
+              <tr>
+                <td class="py-5 pr-6 text-gfour-branco-off opacity-80">Piso 18 cm + 2 telas 10x10 (5 mm)</td>
+                <td class="py-5 px-6 text-gfour-branco font-medium">Piso 16 cm + Macro + Microfibra</td>
+                <td class="py-5 pl-6 text-gfour-verde-claro font-medium">Menos concreto, execução mais rápida</td>
+              </tr>
+              <tr>
+                <td class="py-5 pr-6 text-gfour-branco-off opacity-80">Piso 14 cm + telas combinadas</td>
+                <td class="py-5 px-6 text-gfour-branco font-medium">Piso 12 cm + Sistema G-Four</td>
+                <td class="py-5 pl-6 text-gfour-verde-claro font-medium">Economia de aço, concreto e mão de obra</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-gfour-verde/30 border border-gfour-branco/20 rounded-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p class="text-gfour-branco font-bold text-lg mb-2">Cada obra tem um dimensionamento específico.</p>
+            <p class="text-gfour-branco-off opacity-80 text-sm">Carga, espessura, base, ambiente — tudo influencia a dosagem correta. Receba o cálculo da sua obra com nosso especialista.</p>
+          </div>
+          <a href="https://wa.me/5548996228397?text=Ola!%20Gostaria%20de%20receber%20um%20comparativo%20tecnico%20para%20minha%20obra." target="_blank" rel="noopener noreferrer" class="bg-gfour-branco text-gfour-verde px-8 py-4 rounded-md font-bold text-sm uppercase tracking-wide hover:bg-gfour-branco-off transition-all whitespace-nowrap inline-flex items-center gap-2 flex-shrink-0">Receber meu dimensionamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBRAS DE REFERÊNCIA -->
+    <section class="bg-gfour-creme py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-14">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Obras executadas
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gfour-verde-escuro leading-tight">
+            Economia comprovada em obra real.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-gfour-verde-escuro font-bold text-lg">RD LOG / Garuva — SC</h3>
+                <p class="text-gfour-verde-escuro/60 text-sm">Piso estaqueado industrial</p>
+              </div>
+              <span class="bg-gfour-verde/10 text-gfour-verde font-bold text-sm px-3 py-1 rounded-full">42.800 m²</span>
+            </div>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">Duas etapas: 10.800 m² + 32.000 m² de piso estaqueado com macrofibra estrutural G-Four, projeto técnico e ART.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-gfour-verde-escuro font-bold text-lg">Solar Coca-Cola / Várzea Grande — MT</h3>
+                <p class="text-gfour-verde-escuro/60 text-sm">Piso industrial + pavimento externo</p>
+              </div>
+              <span class="bg-gfour-verde/10 text-gfour-verde font-bold text-sm px-3 py-1 rounded-full">15.000 m²</span>
+            </div>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">9.800 m² de piso industrial + 5.200 m² de pavimento externo com macro e microfibra G-Four.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-gfour-verde-escuro font-bold text-lg">Zaeli Alimentos / Mundo Novo — MS</h3>
+                <p class="text-gfour-verde-escuro/60 text-sm">Piso apoiado industrial</p>
+              </div>
+              <span class="bg-gfour-verde/10 text-gfour-verde font-bold text-sm px-3 py-1 rounded-full">8.000 m²</span>
+            </div>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">Piso apoiado com macro e microfibra G-Four, projeto técnico completo e ART.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-gfour-verde-escuro font-bold text-lg">Construtora Implantec / Piên — SC</h3>
+                <p class="text-gfour-verde-escuro/60 text-sm">Piso apoiado industrial</p>
+              </div>
+              <span class="bg-gfour-verde/10 text-gfour-verde font-bold text-sm px-3 py-1 rounded-full">16.000 m²</span>
+            </div>
+            <p class="text-gfour-verde-escuro/70 text-sm leading-relaxed">16.000 m² de piso apoiado com macro e microfibra G-Four, projeto técnico e ART.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <CtaFinal />
+
   </main>
   <Footer />
 </Layout>
