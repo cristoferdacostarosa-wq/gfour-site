@@ -1,14 +1,141 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import EmBreve from '../components/EmBreve.astro';
 import Footer from '../components/Footer.astro';
+
+const contato = {
+  whatsappNumero: '5548996228397',
+  whatsappExibicao: '(48) 99622-8397',
+  email: 'guilherme.gfourengenharia@gmail.com',
+  endereco: 'Rua Ambrosio de Carvalho, 178 - Jaraguá 99',
+  cidade: 'Jaraguá do Sul / SC',
+  cep: 'CEP 89260-646',
+};
+
+const whatsappMensagem = 'Olá! Vim pelo site da G-Four e gostaria de falar com um especialista sobre minha obra.';
+const whatsappLink = `https://wa.me/${contato.whatsappNumero}?text=${encodeURIComponent(whatsappMensagem)}`;
+
+const canais = [
+  {
+    titulo: 'WhatsApp Comercial',
+    descricao: 'Atendimento técnico direto com nosso especialista. Resposta rápida em horário comercial.',
+    valor: contato.whatsappExibicao,
+    link: whatsappLink,
+    externo: true,
+    icone: 'whatsapp',
+  },
+  {
+    titulo: 'E-mail',
+    descricao: 'Para envio de projetos, memoriais descritivos ou consultas técnicas detalhadas.',
+    valor: contato.email,
+    link: `mailto:${contato.email}`,
+    externo: false,
+    icone: 'email',
+  },
+  {
+    titulo: 'Localização',
+    descricao: 'Atendemos obras em todo o Brasil. Nossa base está em Jaraguá do Sul — SC.',
+    valor: `${contato.endereco} · ${contato.cidade}`,
+    link: null,
+    externo: false,
+    icone: 'pin',
+  },
+];
 ---
 
-<Layout title="Contato | G-Four Fibras Estruturais" description="Fale com a G-Four. Atendimento técnico especializado via WhatsApp para sua obra.">
+<Layout
+  title="Contato | G-Four Fibras Estruturais"
+  description="Fale com a G-Four. Atendimento técnico especializado via WhatsApp para sua obra."
+>
   <Header />
   <main>
-    <EmBreve titulo="Fale Conosco" subtitulo="Em breve, formulário completo de contato. Por enquanto, fale diretamente com nosso especialista via WhatsApp." />
+
+    <!-- HERO -->
+    <section class="bg-gfour-verde-escuro text-gfour-branco py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+          <span class="inline-block w-12 h-px bg-gfour-branco-off"></span>
+          Fale com um especialista
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl">
+          Sua obra merece uma resposta técnica.
+        </h1>
+        <p class="text-gfour-branco-off text-lg md:text-xl leading-relaxed max-w-2xl opacity-90">
+          Fale diretamente com nosso especialista. Sem formulário, sem espera, sem burocracia — atendimento técnico real para a sua obra.
+        </p>
+      </div>
+    </section>
+
+    <!-- CANAIS DE CONTATO -->
+    <section class="bg-gfour-creme py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+          <!-- WhatsApp -->
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10 flex flex-col">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-gfour-verde"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-2">WhatsApp Comercial</h3>
+            <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed mb-6 flex-1">Atendimento técnico direto com nosso especialista. Resposta rápida em horário comercial.</p>
+            <div>
+              <p class="text-gfour-verde-escuro font-bold text-base mb-4">{contato.whatsappExibicao}</p>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="bg-gfour-verde text-gfour-branco px-6 py-3 rounded-md font-bold text-sm uppercase tracking-wide hover:bg-gfour-verde-escuro transition-all inline-flex items-center gap-2 w-full justify-center">
+                Abrir WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10 flex flex-col">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-2">E-mail</h3>
+            <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed mb-6 flex-1">Para envio de projetos, memoriais descritivos ou consultas técnicas detalhadas.</p>
+            <div>
+              <p class="text-gfour-verde-escuro font-bold text-sm mb-4 break-all">{contato.email}</p>
+              <a href={`mailto:${contato.email}`} class="bg-gfour-verde text-gfour-branco px-6 py-3 rounded-md font-bold text-sm uppercase tracking-wide hover:bg-gfour-verde-escuro transition-all inline-flex items-center gap-2 w-full justify-center">
+                Enviar E-mail
+              </a>
+            </div>
+          </div>
+
+          <!-- Localização -->
+          <div class="bg-white rounded-lg p-8 border border-gfour-verde/10 flex flex-col">
+            <div class="w-12 h-12 bg-gfour-verde/10 rounded-lg flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="text-gfour-verde-escuro font-bold text-lg mb-2">Localização</h3>
+            <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed mb-6 flex-1">Atendemos obras em todo o Brasil. Nossa base está em Jaraguá do Sul — SC.</p>
+            <div>
+              <p class="text-gfour-verde-escuro text-sm leading-relaxed">
+                {contato.endereco}<br />
+                {contato.cidade}<br />
+                {contato.cep}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BLOCO CTA WHATSAPP DESTAQUE -->
+        <div class="bg-gfour-verde-escuro rounded-xl p-10 md:p-14 text-gfour-branco text-center">
+          <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-4">Resposta rápida garantida</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Precisa de um dimensionamento técnico?</h2>
+          <p class="text-gfour-branco-off opacity-80 text-lg max-w-xl mx-auto mb-8">
+            Mande os dados da sua obra — tipo de piso, carga, área e espessura — e nosso especialista responde com a solução certa.
+          </p>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="bg-gfour-branco text-gfour-verde px-10 py-4 rounded-md font-bold text-sm uppercase tracking-wide hover:bg-gfour-branco-off transition-all inline-flex items-center gap-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/></svg>
+            Falar com Especialista
+          </a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
   <Footer />
 </Layout>
