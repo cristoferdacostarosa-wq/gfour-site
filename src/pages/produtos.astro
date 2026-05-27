@@ -1,14 +1,316 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import EmBreve from '../components/EmBreve.astro';
 import Footer from '../components/Footer.astro';
+import CtaFinal from '../components/CtaFinal.astro';
 ---
 
-<Layout title="Produtos | G-Four Fibras Estruturais" description="Macrofibra estrutural e microfibra de vidro para concreto. Conheça as soluções técnicas da G-Four.">
+<Layout
+  title="Produtos | Macrofibra e Microfibra Estrutural | G-Four"
+  description="Macrofibra Estrutural e Microfibra de Vidro G-Four para concreto. Tecnologia de reforço que substitui tela de aço com economia e desempenho superior."
+>
   <Header />
   <main>
-    <EmBreve titulo="Nossos Produtos" subtitulo="Estamos preparando o conteúdo técnico completo da Macrofibra e Microfibra. Enquanto isso, fale com nosso especialista." />
+
+    <!-- HERO -->
+    <section class="bg-gfour-verde-escuro text-gfour-branco py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+          <span class="inline-block w-12 h-px bg-gfour-branco-off"></span>
+          Soluções para pisos industriais
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-4xl">
+          Duas tecnologias.<br class="hidden md:block" /> Um sistema completo.
+        </h1>
+        <p class="text-gfour-branco-off text-lg md:text-xl leading-relaxed max-w-2xl opacity-90">
+          A Macrofibra Estrutural reforça o concreto e substitui telas metálicas. A Microfibra de Vidro controla retração e garante acabamento. Juntas, atacam o problema do concreto nas duas frentes.
+        </p>
+      </div>
+    </section>
+
+    <!-- MACROFIBRA -->
+    <section class="bg-white py-20 md:py-28" id="macrofibra">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-14">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Produto 01
+          </p>
+          <h2 class="text-3xl md:text-5xl font-bold text-gfour-verde-escuro leading-tight mb-6">
+            Macrofibra Estrutural
+          </h2>
+          <p class="text-gfour-verde-escuro/70 text-lg leading-relaxed max-w-3xl">
+            Produzida a partir de blend técnico de polipropileno e polietileno de alta performance. Forma uma armadura tridimensional dentro do concreto — aumentando tenacidade, resistência residual e capacidade pós-fissuração.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+
+          <div>
+            <h3 class="text-gfour-verde-escuro font-bold text-sm uppercase tracking-wider mb-6">Especificações Técnicas</h3>
+            <div class="divide-y divide-gfour-verde/10">
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Polímero</span>
+                <span class="text-gfour-verde-escuro font-medium">Blend PE/PP</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Geometria</span>
+                <span class="text-gfour-verde-escuro font-medium">Ondulada</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Comprimento</span>
+                <span class="text-gfour-verde-escuro font-medium">45 mm</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Tensão de ruptura</span>
+                <span class="text-gfour-verde-escuro font-medium">560 MPa</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Módulo de elasticidade</span>
+                <span class="text-gfour-verde-escuro font-medium">8,08 GPa</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Fator de forma</span>
+                <span class="text-gfour-verde-escuro font-medium">94</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Dosagem de referência</span>
+                <span class="text-gfour-verde-escuro font-medium">3 a 12 kg/m³</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Corrosão</span>
+                <span class="text-gfour-verde font-bold">Zero — fibra sintética</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-gfour-verde-escuro font-bold text-sm uppercase tracking-wider mb-6">Diferenciais</h3>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Tenacidade estrutural</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Aumento significativo da resistência residual e do comportamento pós-fissura.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Menor custo global</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Substitui malhas e telas metálicas com redução de tempo, logística e mão de obra.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Armadura tridimensional</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Homogeneização simples, sem risco de erro humano e sem mão de obra especializada.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Zero corrosão</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Fibra sintética não oxida — ideal para ambientes úmidos, agressivos e câmaras frias.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <h3 class="text-gfour-verde-escuro font-bold text-sm uppercase tracking-wider mb-6">Aplicações típicas</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {['Pisos industriais', 'Galpões logísticos', 'Câmaras frias', 'Pavimentos externos', 'Lajes sobre solo', 'Concreto projetado', 'Pré-moldados', 'Garagens e subsolos'].map((app) => (
+              <div class="bg-gfour-creme rounded-lg px-4 py-3 text-sm text-gfour-verde-escuro font-medium text-center">
+                {app}
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DIVISOR -->
+    <div class="bg-gfour-verde h-1 w-full"></div>
+
+    <!-- MICROFIBRA -->
+    <section class="bg-gfour-creme py-20 md:py-28" id="microfibra">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-14">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Produto 02
+          </p>
+          <h2 class="text-3xl md:text-5xl font-bold text-gfour-verde-escuro leading-tight mb-6">
+            Microfibra de Vidro
+          </h2>
+          <p class="text-gfour-verde-escuro/70 text-lg leading-relaxed max-w-3xl">
+            Fibra mineral de alta resistência à alcalinidade, aplicada para prevenir microfissuras, controlar retração plástica e melhorar o acabamento superficial do concreto e argamassas.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+
+          <div>
+            <h3 class="text-gfour-verde-escuro font-bold text-sm uppercase tracking-wider mb-6">Especificações Técnicas</h3>
+            <div class="divide-y divide-gfour-verde/10">
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Composição</span>
+                <span class="text-gfour-verde-escuro font-medium">70% sílica + 30% aditivos</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Comprimento</span>
+                <span class="text-gfour-verde-escuro font-medium">12 mm</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Resistência à alcalinidade</span>
+                <span class="text-gfour-verde-escuro font-medium">NBR 15577-4 — inócua</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Solubilidade</span>
+                <span class="text-gfour-verde-escuro font-medium">Insolúvel em água</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Dosagem de referência</span>
+                <span class="text-gfour-verde-escuro font-medium">300 g a 1,2 kg/m³</span>
+              </div>
+              <div class="flex justify-between py-3 text-sm">
+                <span class="text-gfour-verde-escuro/60">Estabilidade química</span>
+                <span class="text-gfour-verde-escuro font-medium">Estável em condições normais</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-gfour-verde-escuro font-bold text-sm uppercase tracking-wider mb-6">Diferenciais</h3>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Redução de retração plástica</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Minimiza o surgimento de microfissuras e garante acabamento uniforme.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Compatibilidade total</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Mistura perfeita ao concreto e argamassas, sem interferir na fluidez.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Durabilidade e segurança</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Aumenta a resistência ao impacto, vibração, abrasão e variações térmicas.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-gfour-verde/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gfour-verde"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-gfour-verde-escuro font-bold text-sm mb-1">Melhor acabamento superficial</p>
+                  <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Reduz exsudação e melhora a estabilidade da superfície nas primeiras idades.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <h3 class="text-gfour-verde-escuro font-bold text-sm uppercase tracking-wider mb-6">Aplicações típicas</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {['Pisos industriais', 'Contrapisos', 'Argamassas', 'Rebocos', 'Concreto usinado', 'Áreas externas', 'Pré-moldados', 'Pisos residenciais'].map((app) => (
+              <div class="bg-white rounded-lg px-4 py-3 text-sm text-gfour-verde-escuro font-medium text-center border border-gfour-verde/10">
+                {app}
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUANDO USAR CADA UMA -->
+    <section class="bg-gfour-verde-escuro text-gfour-branco py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-14">
+          <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-branco-off"></span>
+            Guia de aplicação
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+            Qual produto usar na sua obra?
+          </h2>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gfour-branco/20">
+                <th class="text-left py-4 pr-6 text-gfour-branco-off font-bold uppercase tracking-wide text-xs">Situação</th>
+                <th class="text-left py-4 px-6 text-gfour-branco-off font-bold uppercase tracking-wide text-xs">Macrofibra</th>
+                <th class="text-left py-4 pl-6 text-gfour-branco-off font-bold uppercase tracking-wide text-xs">Microfibra</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gfour-branco/10">
+              <tr>
+                <td class="py-4 pr-6 text-gfour-branco-off">Substituir tela de aço</td>
+                <td class="py-4 px-6 text-gfour-verde-claro font-medium">✓ Indicada</td>
+                <td class="py-4 pl-6 text-gfour-branco-off/50">—</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-6 text-gfour-branco-off">Controlar microfissuras por retração</td>
+                <td class="py-4 px-6 text-gfour-branco-off/50">—</td>
+                <td class="py-4 pl-6 text-gfour-verde-claro font-medium">✓ Indicada</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-6 text-gfour-branco-off">Piso industrial com carga pesada</td>
+                <td class="py-4 px-6 text-gfour-verde-claro font-medium">✓ Indicada</td>
+                <td class="py-4 pl-6 text-gfour-verde-claro font-medium">✓ Complementar</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-6 text-gfour-branco-off">Melhorar acabamento superficial</td>
+                <td class="py-4 px-6 text-gfour-branco-off/50">—</td>
+                <td class="py-4 pl-6 text-gfour-verde-claro font-medium">✓ Indicada</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-6 text-gfour-branco-off">Máxima performance estrutural</td>
+                <td class="py-4 px-6 text-gfour-verde-claro font-bold">✓ + Microfibra</td>
+                <td class="py-4 pl-6 text-gfour-verde-claro font-bold">✓ + Macrofibra</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <CtaFinal />
+
   </main>
   <Footer />
 </Layout>
