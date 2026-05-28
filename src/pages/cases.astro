@@ -1,14 +1,231 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import EmBreve from '../components/EmBreve.astro';
 import Footer from '../components/Footer.astro';
+import CtaFinal from '../components/CtaFinal.astro';
 ---
 
-<Layout title="Cases e Obras | G-Four Fibras Estruturais" description="Obras realizadas com fibras G-Four. Mais de 6 milhões de m² executados em todo o Brasil.">
+<Layout
+  title="Cases e Obras | G-Four Fibras Estruturais"
+  description="Mais de 7 milhões de m² executados com fibras G-Four em todo o Brasil. Pioneira em piso estaqueado com macrofibra estrutural."
+>
   <Header />
   <main>
-    <EmBreve titulo="Cases e Obras" subtitulo="Estamos reunindo a galeria completa das obras realizadas com fibras G-Four. Em breve, todos os cases detalhados." />
+
+    <!-- HERO -->
+    <section class="bg-gfour-verde-escuro text-gfour-branco py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <p class="text-gfour-branco-off text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+          <span class="inline-block w-12 h-px bg-gfour-branco-off"></span>
+          Obras executadas
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight mb-6 max-w-4xl">
+          25 anos de obra.<br class="hidden md:block" /> 6 milhões de m².
+        </h1>
+        <p class="text-gfour-branco-off text-lg md:text-xl leading-relaxed max-w-2xl opacity-90">
+          De pavimentos de concreto a pisos estaqueados de alta complexidade — a G-Four está na estrutura das maiores obras do Brasil.
+        </p>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="bg-gfour-verde py-14">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-gfour-branco text-center">
+          <div>
+            <p class="text-4xl md:text-5xl font-bold mb-2">+6M</p>
+            <p class="text-gfour-branco-off text-sm uppercase tracking-wide">m² executados</p>
+          </div>
+          <div>
+            <p class="text-4xl md:text-5xl font-bold mb-2">25</p>
+            <p class="text-gfour-branco-off text-sm uppercase tracking-wide">anos de experiência</p>
+          </div>
+          <div>
+            <p class="text-4xl md:text-5xl font-bold mb-2">100%</p>
+            <p class="text-gfour-branco-off text-sm uppercase tracking-wide">com projeto e ART</p>
+          </div>
+          <div>
+            <p class="text-4xl md:text-5xl font-bold mb-2">BR</p>
+            <p class="text-gfour-branco-off text-sm uppercase tracking-wide">atuação nacional</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE DESTAQUE — RD LOG -->
+    <section class="bg-white py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-12">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Case em destaque
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gfour-verde-escuro">Pioneirismo técnico nacional</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="relative">
+            <img
+              src="/images/case-rd-log.jpg"
+              alt="RD LOG Garuva - Piso estaqueado com macrofibra G-Four"
+              class="w-full rounded-lg object-cover aspect-video"
+            />
+            <span class="absolute top-4 left-4 bg-gfour-verde text-gfour-branco text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full">
+              Pioneirismo Nacional
+            </span>
+          </div>
+          <div>
+            <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.15em] mb-3">Piso Estaqueado Industrial</p>
+            <h3 class="text-2xl md:text-3xl font-bold text-gfour-verde-escuro mb-2">RD LOG / Garuva — SC</h3>
+            <p class="text-gfour-verde font-bold text-xl mb-6">42.800 m²</p>
+            <p class="text-gfour-verde-escuro/70 leading-relaxed mb-6">
+              Primeiro projeto de piso estaqueado no Brasil com substituição das armaduras superiores por macrofibra estrutural. A G-Four foi pioneira nessa aplicação — entregando projeto técnico completo com ART, em duas etapas: 10.800 m² e 32.000 m².
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gfour-creme text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full">Piso estaqueado</span>
+              <span class="bg-gfour-creme text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full">Macrofibra estrutural</span>
+              <span class="bg-gfour-creme text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full">Projeto + ART</span>
+              <span class="bg-gfour-creme text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full">2 etapas</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASE DESTAQUE — BRAVA HOME RESORT -->
+    <section class="bg-gfour-creme py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-12">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Case predial
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gfour-verde-escuro">R$ 8,7 milhões de economia comprovada</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.15em] mb-3">Contrapiso e Garagem Predial</p>
+            <h3 class="text-2xl md:text-3xl font-bold text-gfour-verde-escuro mb-2">Brava Home Resort — Praia Brava</h3>
+            <p class="text-gfour-verde-escuro/60 text-sm mb-2">Construtora PROCAVE</p>
+            <p class="text-gfour-verde font-bold text-xl mb-6">~60.000 m²</p>
+            <p class="text-gfour-verde-escuro/70 leading-relaxed mb-6">
+              Aproximadamente 12.000 m² de garagem e 48.000 m² de contrapiso com macro e microfibra G-Four. A substituição do aço pela fibra gerou uma economia de 38% — equivalente a R$ 8.778.000,00 só na troca da armadura.
+            </p>
+            <div class="bg-gfour-verde/10 border border-gfour-verde/20 rounded-lg p-5 mb-6">
+              <p class="text-gfour-verde-escuro text-xs font-bold uppercase tracking-wide mb-3">Resultado financeiro</p>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <p class="text-2xl font-bold text-gfour-verde">38%</p>
+                  <p class="text-gfour-verde-escuro/60 text-xs">de economia vs aço</p>
+                </div>
+                <div>
+                  <p class="text-2xl font-bold text-gfour-verde">R$ 8,7M</p>
+                  <p class="text-gfour-verde-escuro/60 text-xs">economizados na obra</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full border border-gfour-verde/10">Contrapiso predial</span>
+              <span class="bg-white text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full border border-gfour-verde/10">Garagem</span>
+              <span class="bg-white text-gfour-verde-escuro text-xs font-medium px-3 py-1.5 rounded-full border border-gfour-verde/10">Macro + Microfibra</span>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="/images/case-brava-home.jpg"
+              alt="Brava Home Resort Praia Brava - Contrapiso predial com fibras G-Four"
+              class="w-full rounded-lg object-cover aspect-video"
+            />
+            <span class="absolute top-4 left-4 bg-gfour-verde-escuro text-gfour-branco text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full">
+              Obra Predial
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUTRAS OBRAS -->
+    <section class="bg-white py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="mb-12">
+          <p class="text-gfour-verde text-xs font-bold uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-gfour-verde"></span>
+            Obras realizadas
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gfour-verde-escuro">Algumas das nossas obras</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div class="bg-gfour-creme rounded-lg overflow-hidden border border-gfour-verde/10">
+            <div class="relative">
+              <img
+                src="/images/case-solar-coca-cola.jpg"
+                alt="Solar Coca-Cola Várzea Grande - Piso industrial com fibras G-Four"
+                class="w-full object-cover aspect-video"
+              />
+              <span class="absolute top-3 left-3 bg-gfour-verde-escuro text-gfour-branco text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">
+                Piso Industrial
+              </span>
+            </div>
+            <div class="p-6">
+              <p class="text-gfour-verde text-xs font-bold uppercase tracking-wide mb-2">Várzea Grande — MT</p>
+              <h3 class="text-gfour-verde-escuro font-bold text-lg mb-1">Solar Coca-Cola</h3>
+              <p class="text-gfour-verde font-bold mb-3">15.000 m²</p>
+              <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">9.800 m² de piso industrial + 5.200 m² de pavimento externo com macro e microfibra G-Four.</p>
+            </div>
+          </div>
+
+          <div class="bg-gfour-creme rounded-lg overflow-hidden border border-gfour-verde/10">
+            <div class="relative">
+              <img
+                src="/images/case-zaeli.jpg"
+                alt="Zaeli Alimentos Mundo Novo - Piso apoiado com fibras G-Four"
+                class="w-full object-cover aspect-video"
+              />
+              <span class="absolute top-3 left-3 bg-gfour-verde-escuro text-gfour-branco text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">
+                Piso Apoiado
+              </span>
+            </div>
+            <div class="p-6">
+              <p class="text-gfour-verde text-xs font-bold uppercase tracking-wide mb-2">Mundo Novo — MS</p>
+              <h3 class="text-gfour-verde-escuro font-bold text-lg mb-1">Zaeli Alimentos</h3>
+              <p class="text-gfour-verde font-bold mb-3">8.000 m²</p>
+              <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Piso apoiado com macro e microfibra G-Four, projeto técnico completo e ART.</p>
+            </div>
+          </div>
+
+          <div class="bg-gfour-creme rounded-lg overflow-hidden border border-gfour-verde/10">
+            <div class="relative">
+              <img
+                src="/images/case-implantec.jpg"
+                alt="Construtora Implantec Piên - Piso apoiado com fibras G-Four"
+                class="w-full object-cover aspect-video"
+              />
+              <span class="absolute top-3 left-3 bg-gfour-verde-escuro text-gfour-branco text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">
+                Piso Apoiado
+              </span>
+            </div>
+            <div class="p-6">
+              <p class="text-gfour-verde text-xs font-bold uppercase tracking-wide mb-2">Piên — SC</p>
+              <h3 class="text-gfour-verde-escuro font-bold text-lg mb-1">Construtora Implantec</h3>
+              <p class="text-gfour-verde font-bold mb-3">16.000 m²</p>
+              <p class="text-gfour-verde-escuro/60 text-sm leading-relaxed">Piso apoiado com macro e microfibra G-Four, projeto técnico e ART.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <CtaFinal />
+
   </main>
   <Footer />
 </Layout>
